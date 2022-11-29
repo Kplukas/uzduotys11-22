@@ -1,18 +1,14 @@
-import './App.css';
-import Valio from './components/004/Valio';
-import rand from './functions/rand';
+import './App.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header" style={{
-        color: rand(0,1) ? 'red' : 'blue',
-        }}>
-        <Valio spalva="gray" paddingas="20px" bg="pink" cross="yellow" />
-        <Valio spalva="white" paddingas="30px" bg="white" cross="orange" />
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="App-header">
+                <button className="button">Buttonas</button>
+            </div>
+
+        </div>
+    );
 }
 
 export default App;
