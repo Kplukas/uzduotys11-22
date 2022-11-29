@@ -4,7 +4,7 @@ function App() {
     return (
         <div className="App">
             <div className="App-header">
-                <button className="button">Buttonas</button>
+                <button>Buttonas</button>
             </div>
 
         </div>
