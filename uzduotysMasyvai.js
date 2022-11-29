@@ -36,3 +36,9 @@ for (i = 0; i < pinigine.length; i++) {
     }
 }
 console.log(didziausi)
+//suma random
+
+const haystack = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
+const isNeedle = (element) => element = "needle";
+const indexas = haystack.findIndex(isNeedle);
+console.log(indexas);
