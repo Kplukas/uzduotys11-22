@@ -17,7 +17,7 @@ function App() {
         <div className="App">
             <div className="App-header">
                 <h1 style={{color: color}}>Bebras</h1>
-                <button onClick={change} >Color change</button>
+                <button onClick={change} >Bebras color change</button>
                 <button onClick={now} >Press on 9:00PM</button>
             </div>
 
