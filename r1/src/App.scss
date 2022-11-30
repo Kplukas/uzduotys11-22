@@ -68,3 +68,21 @@
     text-transform: uppercase;
   }
 }
+
+.bin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  .sq {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px dashed white;
+    &.blue {
+      background-color: skyblue;
+      border-color: skyblue;
+    }
+  }
+}
