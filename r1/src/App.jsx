@@ -17,7 +17,7 @@ function App() {
         //----------fetch budas
         fetch('https://in3.dev/knygos/')
         .then((res) => res.json())
-        .then((data) => setBooks(data));
+        .then((data) => setBooks(data.sort((a, b) => b.price - a.price)));
 
     },[])
 
@@ -33,7 +33,11 @@ function App() {
                 </div> */}
                 <ul>
                     {
-                        books?.map(b => <li key={b.id}>{b.title}</li>)
+                        books?.map(b => <li key={b.id}>
+                            <img src={b.img} alt="book"></img>
+                            <h2>{b.title}</h2>
+                            <h2>{b.price}</h2>
+                            </li>)
                     }
                 </ul>
             </div>
