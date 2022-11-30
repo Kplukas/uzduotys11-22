@@ -28,7 +28,7 @@ function App() {
                 {/* mas.map((a, i) => a.type ==='cat' ? <Cat key={i} cat={a}/> : <Dog key={i} dog={a}/>) */}
                 <div className="bin">
                     {
-                        sq.map((sq) => <Sq key={sq.id} sq={sq} />)
+                        sq.map((square) => <Sq key={square.id} square={square} setSq={setSq}/>)
                     }
                 </div>
                 <button onClick={add}>ADD</button>
