@@ -24,10 +24,10 @@ function App() {
     }
 
     const write = () => {
-        localStorage.setItem('myCat', 'Big and Black')
+        localStorage.setItem('myCat',JSON.stringify({cat: 'Big and Black', color: 'red'}) )
     }
     const read = () => {
-        setCat(localStorage.getItem('myCat'));
+        setCat(JSON.parse(localStorage.getItem('myCat')));
     }
     const remove = () => {
         localStorage.removeItem('myCat')
@@ -42,7 +42,7 @@ function App() {
                         sq.map((square) => <Sq key={square.id} square={square} setSq={setSq}/>)
                     }
                 </div>
-                <h2>{cat}</h2>
+                <h2 style={{color: cat?.color}}>{cat?.cat}</h2>
                 <button onClick={add}>ADD</button>
                 <button onClick={write}>Write</button>
                 <button onClick={read}>Read</button>
