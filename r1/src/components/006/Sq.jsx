@@ -1,7 +1,15 @@
+import { useEffect } from "react";
+
 function Sq({square, setSq}) {
 
+    useEffect(() => {
+        console.log('new', square.id);
+        return () => {
+            console.log('gone', square.id);
+        }
+    }, []);
+
     const delSq = () => {
-        console.log(square.id + ' destroyed')
         setSq(s => s.filter(oneSq => oneSq.id !== square.id))
     }
 
