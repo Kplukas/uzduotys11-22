@@ -17,9 +17,20 @@ function App() {
     //];
 
     const[sq, setSq] = useState([]);
+    const[cat, setCat] = useState('');
 
     const add = () => {
         setSq(s => [...s, { id: rand(100000, 999999), color: randCol()}]);
+    }
+
+    const write = () => {
+        localStorage.setItem('myCat', 'Big and Black')
+    }
+    const read = () => {
+        setCat(localStorage.getItem('myCat'));
+    }
+    const remove = () => {
+        localStorage.removeItem('myCat')
     }
 
     return (
@@ -31,7 +42,11 @@ function App() {
                         sq.map((square) => <Sq key={square.id} square={square} setSq={setSq}/>)
                     }
                 </div>
+                <h2>{cat}</h2>
                 <button onClick={add}>ADD</button>
+                <button onClick={write}>Write</button>
+                <button onClick={read}>Read</button>
+                <button onClick={remove}>Remove</button>
             </div>
 
         </div>
